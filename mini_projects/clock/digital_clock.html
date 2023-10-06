@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+<body>
+
+    <p id="initial_time"></p>
+    <p id="clock" ></p>
+    <button id="stop" >Stop</button>
+    <button id="resume">resume</button>
+   
+
+    <script>
+
+
+         // to get initial time
+        const i = new Date();
+        document.getElementById('initial_time').innerHTML=` initial time ${i.toLocaleTimeString()}`;
+
+        
+        // getting references of elements
+        const clock=document.getElementById('clock')
+        const stop=document.getElementById('stop')
+        const resume=document.getElementById('resume')
+
+
+
+
+        //to start the clock
+        let timer = setInterval(update_clock,1000);
+        
+        //repititive function defining
+        function update_clock(){
+            const d= new Date();
+            clock.innerHTML=d.toLocaleTimeString();
+        }
+    
+
+        // clear the ongoing method 
+        stop.addEventListener('click',()=>{
+            clearInterval(timer);
+            
+        })
+        
+        //again calling the method to restart the clock
+        resume.addEventListener('click',()=>{
+            timer= setInterval(update_clock,1000);
+         ;})
+
+
+
+    </script>
+ 
+
+</body>
+
+</html>
