@@ -7,6 +7,7 @@
 
 body{
     background-color: #f4f7f8;
+    position:relative;
     font-family:sans-serif;
     display:flex;
     flex-wrap:wrap;     /* to wrap all the new notes automatically */
@@ -26,6 +27,16 @@ body{
     margin-left:2rem;
     font-weight:400;
 }
+#heading2{
+    position:absolute;
+    font-size:2.5rem;
+    top:8.5rem;
+    text-align:center;
+    left:45%;
+    font-weight:300;
+
+    
+}
 
 /* <div class="btn-div">
         <button class="learn-more" class="add" id="add">
@@ -39,6 +50,9 @@ body{
 
 .box:active{
     transform: scale(0.98);           /**************/
+}
+.box{
+    transition:all 1s cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .btn-div{
@@ -68,7 +82,7 @@ button{
 
 }
 button.learn-more{
-      width:12rem;
+    width:12rem;
     height:auto;
 }
 
@@ -223,8 +237,84 @@ button:hover .button-text{
 
 .main{
     padding:20px;
+    color:#767474;
+    font-size:0.9rem;
 }
 
 .hidden{
     display:none;
 }
+
+#help{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+#container{
+    height:350px;
+    width:600px;
+    padding:30px;
+    border-radius: 8px;
+    line-height: 40px;
+    background: khaki;
+    box-shadow: 5px 5px 10px rgb(103, 101, 101);
+   
+    
+}
+
+#help ul{
+    list-style-type:none;
+    letter-spacing: 0.8px;
+}
+#help h2{
+    text-align: center;
+
+}
+#help ul li#li_heading{
+    font-size:18px;
+    text-align: center;
+    margin-bottom:20px;
+
+}
+
+
+#i_div {
+
+    
+    border-radius:50%;
+    animation: bounce 1s;
+    transform: translateY(0px);
+    animation-iteration-count: infinite;
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    filter:drop-shadow(5px 5px 5px rgb(141, 141, 141)) ;
+    color:black;
+    background: white;
+    height:40px;
+    width:40px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:18px;
+
+  }
+  
+
+#i_div:hover {
+    
+   color:white;
+   background: black;
+
+  }
+  
+  
+  
+  
+  @keyframes bounce {
+ 
+  }

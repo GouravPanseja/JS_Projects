@@ -1,5 +1,6 @@
 const addButton = document.querySelector("#add");
-const theme = 'light'
+
+
 
 // this function takes the value of all the textareas made till the point of editing of the current note
 // ,put them in an array and that array is
@@ -16,7 +17,7 @@ const updateLSData = () => {
   localStorage.setItem("notes", JSON.stringify(notes));
 };
 
-var addNewNote = (text = "") => {
+const addNewNote = (text = "") => {
   const note = document.createElement("div"); // note is just the reference for div element
   note.classList.add("box");
 
@@ -43,7 +44,7 @@ var addNewNote = (text = "") => {
   const mainDiv = note.querySelector(".main");
   const textarea = note.querySelector("textarea");
 
-  document.body.appendChild(note); // it adds the element as the last child of the given parent
+  document.body.appendChild(note);                                               // it adds the element as the last child of the given parent
 
   delButton.addEventListener("click", () => {
     note.remove();
@@ -51,33 +52,37 @@ var addNewNote = (text = "") => {
 
   });
 
-  // in any case of text argument value, these must be initialised with text value
+                                                                                // in any case of text argument value, these must be initialised with text value
   mainDiv.innerText = text;
-  textarea.value = text; // so that we can edit the input the text
+  textarea.value = text;                                                        // so that we can edit the input the text
 
   editButton.addEventListener("click", () => {
-    // mainDiv.innerText= textarea.value;        // alternative to .....1.....
+                                                                                // mainDiv.innerText= textarea.value; // alternative to .1.....
     mainDiv.classList.toggle("hidden"); // mainDiv--hidden
     textarea.classList.toggle("hidden"); // textarea--visible
   });
 
   textarea.addEventListener("change", (event) => {
-    // .......1....initially for empty text argument
+                                                                                // .......1....initially for empty text argument
 
     mainDiv.innerText = textarea.value;
     updateLSData();
   });
 };
 
-const notes = JSON.parse(localStorage.getItem("notes"));
+
+
+const notes = JSON.parse(localStorage.getItem("notes"));       //if there is no 'notes' key in the local storage we get
 
 if (notes) {
-  //notes here gives the array it stores
-  notes.forEach((note) => {
-    addNewNote(note);
+                                                                //notes here gives the array it stores
+  notes.forEach((noteText) => {
+    addNewNote(noteText);
   });
 }
 
 addButton.addEventListener("click", () => {
-  addNewNote();
+
+  console.log('hey')
+    addNewNote();
 });
