@@ -1,4 +1,8 @@
 const addButton = document.querySelector("#add");
+const container = document.getElementById('container');
+const i_div = document.getElementById('i_div');
+const help = document.querySelector('.help')
+
 
 
 
@@ -44,7 +48,7 @@ const addNewNote = (text = "") => {
   const mainDiv = note.querySelector(".main");
   const textarea = note.querySelector("textarea");
 
-  document.body.appendChild(note);                                               // it adds the element as the last child of the given parent
+  container.appendChild(note);                                               // it adds the element as the last child of the given parent
 
   delButton.addEventListener("click", () => {
     note.remove();
@@ -86,3 +90,8 @@ addButton.addEventListener("click", () => {
   console.log('hey')
     addNewNote();
 });
+
+i_div.addEventListener('click',()=>{
+
+  help.classList.toggle('hidden')
+})
