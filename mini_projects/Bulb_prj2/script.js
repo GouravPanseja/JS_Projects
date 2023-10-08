@@ -8,7 +8,7 @@ const image= document.getElementById('image')
             if(text=='OFF'){
                 btn.innerHTML='ON';
                 text= 'ON';
-                image.src='images/bulbON.png'
+                image.src='bulbON.png'
                 console.log('button on')
             
                
@@ -16,7 +16,7 @@ const image= document.getElementById('image')
             }
             else if(text=='ON'){
                 btn.innerHTML='OFF';
-                image.src='images/bulbOFF.png'
+                image.src='bulbOFF.png'
                 text='OFF'
                 console.log('button off')
 
