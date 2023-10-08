@@ -33,10 +33,10 @@ const addNewNote = (text = "") => {
      </div>
         <div class="main ${
           text ? "" : "hidden"
-        }" > </div>     <!--remember that empty string is falsy-->
+        }"  placeholder='Edit'> </div>     <!--remember that empty string is falsy-->
         <textarea class="${
           text ? "hidden" : ""
-        }" ></textarea>    <!-- when there is no text, textarea is visible and when there is some text main div is visisble-->
+        }" placeholder="Edit..."></textarea>    <!-- when there is no text, textarea is visible and when there is some text main div is visisble-->
     </div>`; // backticks support multiline string
 
   note.insertAdjacentHTML("afterbegin", htmlData);

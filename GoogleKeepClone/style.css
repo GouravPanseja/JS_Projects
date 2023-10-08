@@ -253,7 +253,7 @@ button:hover .button-text{
     left:50%;
     transform:translate(-50%,-50%);
     z-index:10;
-    height:400px;
+    height:420px;
     width:600px;
     padding:30px;
     border-radius: 8px;
@@ -261,6 +261,7 @@ button:hover .button-text{
     background: #ffe57b;
     box-shadow: 5px 5px 10px rgb(103, 101, 101);
     overflow:scroll;
+    font-size:14px;
 
     
 
