@@ -94,7 +94,7 @@ button.learn-more .circle{
     margin:0;
     width:3rem;           /* By default the .circle elem is a square in shape, therefore, by giving it border radius of 1.5rem we make it a cicle  */
     height:3rem;          /* when button is hovered upon its width is changed to 12rem causing it to transition into a rectangle with curved corners */
-    background: #f1c12e;
+    background: #000;
     border-radius: 1.5rem;
 
 }
